@@ -1,15 +1,14 @@
-import FirestoreResource from './firestore/src/firestore.resource';
-import FirestoreDatabase from './firestore/src/firestore.database';
-import { Schema, SchemaItem } from './firestore/src/utils/schema';
+import { Database } from './Database.js';
+import { Resource } from './Resource.js';
 
-export * from './functions/src/parse-files';
-export * from './functions/src/plugin';
-export * from './functions/src/routes';
+export { Database, Resource };
 
-export const FirestoreAdapter = {
-  Resource: FirestoreResource,
-  Database: FirestoreDatabase,
+// Default export for AdminJS.registerAdapter()
+export default {
+  Database,
+  Resource,
 };
 
-export * from './authentication/authentication';
-export { Schema, SchemaItem };
+// Named exports for convenience
+export * from './Database.js';
+export * from './Resource.js';
