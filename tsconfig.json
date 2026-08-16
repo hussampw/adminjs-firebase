@@ -1,33 +1,20 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es6",
-    "lib": [
-      "es2018",
-      "DOM"
-    ],
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "noImplicitAny": false,
-    "strictNullChecks": true,
-    "esModuleInterop": true,
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "lib": ["ES2022"],
+    "outDir": "./build",
+    "rootDir": "./src",
     "declaration": true,
-    "declarationDir": "./lib",
-    "outDir": "./lib",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "baseUrl": ".",
-    "paths": {
-      "react": ["node_modules/@types/react"],
-      "styled-components": ["node_modules/@types/styled-components"]
-    }
+    "declarationMap": true,
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
   },
-  "include": [
-    "./src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "lib",
-    "example"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build", "example"]
 }
